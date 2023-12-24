@@ -49,12 +49,12 @@ const initialState = {
       name: "Aman Khare",
       position: "JavaScript Developer",
       aboutDescription: `
-    Hi, my name is Adriano Smith and I began using WordPress 
+    Hi, my name is Aman khare and I began using Html,css 
     when it first began. I’ve spent most of my waking hours for 
-    the last ten years designing, programming and operating WordPress sites.
+    the last ten years designing, programming and operating Html and Css.
     One of my specialties is taking an idea from scratch and creating a 
     full-fledged platform. I go beyond to produce sites with a unique, outstanding, 
-    contemporary look-and-feel. With extensive knowledge of web mechanics, 
+    contemporary look-and-feel. With extensive knowledge of Javascript, Jquery,React js,Redux saga, Redux Toolkit, 
     I’m able to optimize complex integrations to require little-to-no maintenance 
     while running on their own for years.
     `,
