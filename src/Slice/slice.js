@@ -2,19 +2,21 @@ import { createSlice } from "@reduxjs/toolkit";
 import time from "../assets/images/timer.png";
 import avesha from "../assets/images/avesha.png";
 import Solitaire from "../assets/images/Solitaire.png";
-import home from "../assets/images/home.svg";
-import about from "../assets/images/about.svg";
-import portfolio from "../assets/images/portfolio.svg";
-
+import home from "../assets/images/home.png";
+import about from "../assets/images/user.png";
+import portfolio from "../assets/images/suitcase.png";
+import education from "../assets/images/skills.png";
+import mortarboard from "../assets/images/mortarboard.png";
 const initialState = {
   theme: "white",
+  toggleBar: false,
   currentPage: "Home",
   menuList: [
     { icon: home, title: "Home" },
     { icon: about, title: "About" },
-    { icon: portfolio, title: "Portfolio" },
-    // { icon: "", title: "Services" },
-    // { icon: "", title: "Contact" },
+    { icon: portfolio, title: "Projects" },
+    { icon: education, title: "Skills" },
+    { icon: mortarboard, title: "Education" },
   ],
   position: ["Frontend Developer", "JavaScript Developer", "React Developer"],
   objective: `Dedicated Front End Developer with expertise in React, JavaScript, HTML, and CSS, 
@@ -58,7 +60,20 @@ const initialState = {
     `,
       email: "aman.khare2411@gmail.com",
       phone: "9807441776",
+      git: "https://github.com/aman241192",
     },
+  ],
+
+  skills: [
+    { title: "Html", value: 90 },
+    { title: "Css", value: 90 },
+    { title: "Scss", value: 90 },
+    { title: "Javascript", value: 85 },
+    { title: "Jquery", value: 85 },
+    { title: "React", value: 85 },
+    { title: "Node", value: 70 },
+    { title: "Express", value: 70 },
+    { title: "MongoDb", value: 70 },
   ],
 };
 
@@ -73,10 +88,15 @@ export const counterSlice = createSlice({
     currentPageAction: (state, action) => {
       state.currentPage = action.payload;
     },
+
+    toggleAction: (state, action) => {
+      state.toggleBar = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { themeAction, currentPageAction } = counterSlice.actions;
+export const { themeAction, currentPageAction, toggleAction } =
+  counterSlice.actions;
 
 export default counterSlice.reducer;

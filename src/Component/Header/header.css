@@ -1,0 +1,39 @@
+.headerContainer{
+    max-width: 1620px;
+    margin: auto;
+    padding: 20px ;
+    /* background: black; */
+    background: transparent;
+}
+.headerButton{
+    margin-left: auto;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 2px 2px #fef7f7;  
+}
+.downloadBtn{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.downloadBtn:hover{
+    color: #008bff;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+
+}
+
+@media(max-width:992px){
+    .hamburger{
+        display: block;
+    }
+}

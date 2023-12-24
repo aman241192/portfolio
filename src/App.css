@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
+}
+
+body{
+  background: black;
 }
 
 img{
@@ -10,6 +15,46 @@ img{
   margin: auto;
 }
 
-.typewriter{
-  color: red;
+.container{
+  padding: 20px;
+  border-radius: 10px;
+  background: #f4f4f4;
+  max-width: 1600px;
+  margin: auto;
+}
+
+h2{
+  font-size:40px;
+  font-weight:600;
+  margin-bottom: 20px;
+}
+
+.containerFlex{
+  display: flex;
+  flex-direction: row; 
+  grid-gap: 30px;  
+}
+
+.sideBar_outer{
+  display: flex;
+  align-items: center;
+  max-width: 460px;
+  width: 100%;}
+
+@media(max-width:1440px){
+  .sideBar_outer{
+    max-width: 400px;
+  }
+}
+
+@media(max-width:1200px){
+  .sideBar_outer{
+    max-width: 350px;
+  }
+}
+
+@media(max-width:992px){
+  .sideBar_outer{
+    display: none;
+  }
 }

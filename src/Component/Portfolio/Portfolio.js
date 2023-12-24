@@ -8,20 +8,22 @@ const Portfolio = () => {
 
   return (
     <div>
-      <Box mt="50px">
+      <Box>
         <Container>
-          <Typography variant="h5" mb="50px">
+          <Typography variant="h5" mb="50px" fontSize={"35px"}>
             Creative Portfolio
           </Typography>
 
-          <Stack
-            spacing={"20px"}
-            direction={"row"}
-            justifyContent={"space-between"}
-            flexWrap={"wrap"}
+          <Box
+            sx={{
+              display: "flex",
+              gridGap: "20px",
+              justifyContent: "flex-start",
+              flexWrap: "wrap",
+            }}
           >
             {portfolio.map((item) => (
-              <Card maxWidth="400px" width="100%">
+              <Card maxWidth="300px" width="100%">
                 <a href={item.link} target="_blank">
                   <img
                     src={item?.image}
@@ -34,7 +36,7 @@ const Portfolio = () => {
                 </Typography>
               </Card>
             ))}
-          </Stack>
+          </Box>
         </Container>
       </Box>{" "}
     </div>

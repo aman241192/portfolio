@@ -1,0 +1,31 @@
+.socailLinks{
+    width: 50px;
+    height: 50px;
+    padding:10px;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.socailLinks:hover{
+    background: #cdcdcd
+}
+
+.userImagebox{
+    max-width: 300px;
+    width:100%;
+    height:300px;
+    border:7px solid #dadada;
+    overflow:hidden;
+    /* borderRadius="30% 70% 70% 30% / 30% 30% 70% 70% " */
+    border-radius:50%
+}
+
+@media(max-width:1200px){
+    .userImagebox{
+        max-width: 250px;
+        height: 250px;
+    }
+}

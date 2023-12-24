@@ -2,35 +2,47 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import aman_khare_cv from "../../assets/aman_khare_cv.pdf";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa6";
+
+import "./about.css";
 
 const About = () => {
   const personalInfo = useSelector((state) => state.counter.personalInfo);
 
   return (
     <div>
-      <Container sx={{ marginTop: "100px" }}>
-        <Typography variant="h4" fontSize={"30px"} fontWeight={600} mb="20px">
-          About Me
-        </Typography>
+      <Container>
+        <h2 variant="h2">About Me</h2>
 
         {personalInfo.map((item) => (
           <Box>
-            <Box borderBottom={"2px solid gray"} pb="20px" mb={"20px"}>
-              <Typography variant="h5">{item.name}</Typography>
-              <Typography variant="h6">{item.position}</Typography>
+            <Box borderBottom={"2px solid gray"} pb="20px" mb={"10px"}>
+              <Typography variant="h5" fontSize={"25px"} mb="5px">
+                {item.name}
+              </Typography>
+              <Typography variant="h6" fontSize={"20px"}>
+                {item.position}
+              </Typography>
             </Box>
 
-            <Typography variant="p">{item.aboutDescription} </Typography>
+            <p className="description"> {item.aboutDescription}</p>
 
             <Stack
-              direction={"row"}
               spacing={"15px"}
               borderTop={"2px solid gray"}
               pt="20px"
               mt={"20px"}
             >
-              <Typography>Email:</Typography>
-              <Typography>{item.email}</Typography>
+              <Stack direction="row" alignItems={"center"} spacing={"20px"}>
+                <BiLogoGmail fontSize={"20px"} />
+                <Typography className="description">{item.email}</Typography>
+              </Stack>
+
+              <Stack direction="row" alignItems={"center"} spacing={"20px"}>
+                <FaGithub fontSize={"20px"} />
+                <Typography className="description">{item.git}</Typography>
+              </Stack>
             </Stack>
 
             <Stack
@@ -39,7 +51,7 @@ const About = () => {
               borderTop={"2px solid gray"}
               pt="20px"
               mt={"20px"}
-              mb="20px"
+              mb="30px"
             >
               <Typography>Phone:</Typography>
               <Typography>{item.phone}</Typography>
